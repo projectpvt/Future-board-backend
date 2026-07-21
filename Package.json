@@ -1,0 +1,17 @@
+{
+  "name": "future-board-backend",
+  "version": "1.0.0",
+  "description": "Backend proxy that makes real Claude API calls for the Future Board app, keeping the API key hidden from the app itself.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
