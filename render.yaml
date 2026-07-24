@@ -1,0 +1,9 @@
+services:
+Line 2:   - type: web (two spaces before the dash)
+Line 3:     name: future-board-backend (four spaces)
+Line 4:     runtime: node (four spaces)
+Line 5:     buildCommand: npm install (four spaces)
+Line 6:     startCommand: node server.js (four spaces)
+Line 7:     envVars: (four spaces)
+Line 8:       - key: ANTHROPIC_API_KEY (six spaces)
+Line 9:         sync: false (eight spaces)
