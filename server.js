@@ -41,9 +41,9 @@ async function callClaude(prompt, maxTokens) {
 }
 
 // ── Image search — real, human-made only ────────────────────────────────
-// Every result is checked here for a name attached to a real human before
-// it's ever sent back. A missing credit means the item is dropped, not
-// passed through uncredited — same fail-closed rule as the client's pool.
+// Every result is checked here for a name attached to a real human, or a
+// named real institution, before it's ever sent back. A missing credit
+// means the item is dropped, not passed through uncredited.
 
 async function searchUnsplash(query) {
   if (!UNSPLASH_ACCESS_KEY) return [];
@@ -120,6 +120,26 @@ app.get('/api/images', async (req, res) => {
   } catch (err) {
     console.error('Image search error:', err.message);
     res.status(502).json({ error: 'Upstream API error' });
+  }
+});
+
+// Unsplash's API terms require notifying them whenever a photo is actually
+// used (saved, displayed prominently) so photographers get proper credit
+// toward their stats. Fire-and-forget — never blocks the person's app.
+app.post('/api/unsplash/track', async (req, res) => {
+  try {
+    if (!isAuthorised(req)) {
+      return res.status(401).json({ error: 'Unauthorised' });
+    }
+    const { downloadTrigger } = req.body;
+    if (!downloadTrigger || typeof downloadTrigger !== 'string' || !downloadTrigger.startsWith('https://api.unsplash.com/')) {
+      return res.status(400).json({ error: 'Invalid downloadTrigger' });
+    }
+    fetch(downloadTrigger, { headers: { Authorization: `Client-ID ${UNSPLASH_ACCESS_KEY}` } }).catch(() => {});
+    res.json({ ok: true });
+  } catch (err) {
+    console.error('Unsplash track error:', err.message);
+    res.status(500).json({ error: 'Failed' });
   }
 });
 
