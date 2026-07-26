@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 2,
+  "note": "uploadsPlaylistId is channelId with the leading UC swapped for UU. Page playlistItems.list against it at 1 unit per 50 videos. Nothing renders unless 'who' is populated.",
+  "sources": [
+    {
+      "name": "Ben Felix",
+      "who": "Benjamin Felix, CFA, CFP",
+      "handle": "@BenFelixCSI",
+      "channelId": "UCDXTQ8nWmx_EhZ2v-kp7QxA",
+      "uploadsPlaylistId": "UUDXTQ8nWmx_EhZ2v-kp7QxA",
+      "standing": "Chief Investment Officer and Portfolio Manager, PWL Capital, Ottawa; CFA charterholder; CFP professional",
+      "interest": "Employed by a wealth management firm that sells the strategy he describes. PWL publishes model portfolios and white papers openly. PWL received investment from OneDigital, January 2025.",
+      "lanes": ["money", "career"],
+      "label": null
+    },
+    {
+      "name": "The Rational Reminder Podcast",
+      "who": "Benjamin Felix, Cameron Passmore, Dan Bortolotti",
+      "handle": "@rationalreminder",
+      "channelId": "UCOErWFfNOQzXsgE7f5S_ULw",
+      "uploadsPlaylistId": "UUOErWFfNOQzXsgE7f5S_ULw",
+      "standing": "All portfolio managers at PWL Capital, securities-licensed by CIRO",
+      "interest": "Same firm as above. Long-form interviews with academics.",
+      "lanes": ["money", "career", "psychology"],
+      "label": null,
+      "openQuestion": "Audio-first. Decide whether this belongs in the 70% video lane or the 30% column."
+    },
+    {
+      "name": "E3 Rehab",
+      "who": "Chris Hughen DPT, Marc Surdyka DPT, Tony Maritato DPT",
+      "handle": "@E3Rehab",
+      "channelId": "UCkb9jgRxR2D5bc1fSDofwtA",
+      "uploadsPlaylistId": "UUkb9jgRxR2D5bc1fSDofwtA",
+      "standing": "Doctors of Physical Therapy, practising clinicians. Endorsed by Erik Meira DPT and Rich Willy PT PhD.",
+      "interest": "Sell rehab programmes, disclosed on their site.",
+      "lanes": ["health", "movement", "rehab"],
+      "label": null
+    },
+    {
+      "name": "E3 Rehab Exercise Library",
+      "who": "Chris Hughen DPT, Marc Surdyka DPT, Tony Maritato DPT",
+      "handle": null,
+      "channelId": "UCpyjZrR0so-aHFIyg2U0cyw",
+      "uploadsPlaylistId": "UUpyjZrR0so-aHFIyg2U0cyw",
+      "standing": "Secondary channel. Pure movement demonstration, no commentary.",
+      "interest": "Same as E3 Rehab.",
+      "lanes": ["movement", "rehab"],
+      "label": null
+    },
+    {
+      "name": "Physiotutors",
+      "who": "Kai Sigel PT BSc (Hons), Andreas Heck PT BSc (Hons)",
+      "handle": "@physiotutors",
+      "channelId": "UC_VQDInMfY5HoPn8w9OmuFw",
+      "uploadsPlaylistId": "UU_VQDInMfY5HoPn8w9OmuFw",
+      "standing": "Physiotherapists. Provide statistical data and an evidence statement in most videos.",
+      "interest": "Sell courses and an app.",
+      "lanes": ["rehab", "movement"],
+      "label": "Physiotutors state their content is educational material for healthcare professionals and students, is not medical advice, and that patients should seek care from a health professional.",
+      "openQuestion": "Their stated audience is clinicians, not your user. Include narrowly with this disclaimer, or drop."
+    },
+    {
+      "name": "Nutrition Made Simple!",
+      "who": "Gil Carvalho, MD PhD",
+      "handle": "@NutritionMadeSimple",
+      "channelId": "UCosmc75v-B2Dk7GWyEyFFMw",
+      "uploadsPlaylistId": "UUosmc75v-B2Dk7GWyEyFFMw",
+      "standing": "MD, University of Lisbon; PhD Biology, Caltech; published peer-reviewed research in genetics, molecular biology, nutrition, ageing, neuroscience",
+      "interest": "Independent. No supplement sponsorship identified.",
+      "lanes": ["health", "nutrition"],
+      "label": null
+    },
+    {
+      "name": "Andrew Huberman",
+      "who": "Andrew Huberman, PhD",
+      "handle": "@hubermanlab",
+      "channelId": "UC2D2CMWXMOVWx7giW1n3LIg",
+      "uploadsPlaylistId": "UU2D2CMWXMOVWx7giW1n3LIg",
+      "standing": "Associate professor of neurobiology and ophthalmology, Stanford School of Medicine; h-index approx. 45, over 14,000 citations",
+      "interest": "Scientific adviser to and sponsored by AG1, a supplement company, which sponsored the first episode and remains a sponsor. Announces paid partnerships before relevant segments and publishes sponsorship detail in episode descriptions.",
+      "lanes": ["health", "psychology", "sleep", "focus"],
+      "label": "Andrew Huberman is a scientific adviser to and sponsored by AG1, a supplement company. Some immunologists and clinicians dispute the strength of evidence behind specific protocol claims."
+    },
+    {
+      "name": "The Diary Of A CEO",
+      "who": "Steven Bartlett",
+      "handle": "@TheDiaryOfACEO",
+      "channelId": "UCGq-a57w-aPwyi3pW7XLiHw",
+      "uploadsPlaylistId": "UUGq-a57w-aPwyi3pW7XLiHw",
+      "standing": "Interview podcast. Bartlett owns Flight Studio, the production company.",
+      "interest": "Reported approx. £20m annual revenue from the show. Guests have included figures whose claims are disputed by health bodies.",
+      "lanes": ["career", "business", "psychology"],
+      "healthLaneRequires": "per-episode label",
+      "label": null,
+      "labelPatternForHealthEpisodes": "The BBC's Global Misinformation Unit and four named health specialists dispute claims in this episode. Flight Studio disputes their findings.",
+      "openQuestion": "Business and psychology episodes need no label and can enter at channel level. Health episodes enter only as fast as they are individually labelled."
+    }
+  ]
+}
